@@ -70,12 +70,9 @@
   padding-right: var(--gf-header-padding);
 }
 
+.your-header__text,
 .game-header__text {
-  font-size: var(--op-font-2x-large);
-}
-
-.your-header__text {
-  font-size: var(--op-font-x-large);
+  font-size: var(--op-font-large);
 }
 
 // block content
@@ -96,7 +93,7 @@
 }
 
 .player-decks-heading {
-  font-size: var(--op-font-2x-large);
+  font-size: var(--op-font-large);
 }
 
 .player-hands {
@@ -113,6 +110,11 @@
 .accordion__label {
   display: flex;
   justify-content: space-between;
+}
+
+.hand-info {
+  display: flex;
+  gap: var(--op-space-small);
 }
 
 .accordion__label span {
@@ -139,10 +141,10 @@
 }
 
 .player-action {
-  padding: calc(.5 *var(--feed-padding));
+  padding: calc(.3 *var(--feed-padding));
   background-color: var(--op-color-primary-plus-three);
   border-radius: var(--op-radius-x-large);
-  font-size: var(--op-font-x-large);
+  font-size: var(--op-font-medium);
 }
 
 .action-responses {
@@ -179,7 +181,7 @@
 .game-actions {
   display: flex;
   flex-direction: column;
-  padding: calc(.6 * var(--feed-padding));
+  padding: calc(.3 * var(--feed-padding));
   gap: var(--op-space-small);
 
   background-color: var(--op-color-primary-base);
@@ -200,10 +202,10 @@
 }
 
 .form-label {
-  font-size: var(--op-font-large);
+  font-size: var(--op-font-medium);
 }
 
 .game-actions-btn {
   background-color: var(--op-color-primary-plus-three);
-  font-size: var(--op-font-x-large);
+  font-size: var(--op-font-medium);
 }
