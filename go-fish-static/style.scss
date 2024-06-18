@@ -1,1 +1,59 @@
 @import "@rolemodel/optics/dist/scss/optics.scss";
+
+
+
+.game-page {
+  --gf-game-feed-width: calc(125 * var(--op-size-unit));
+  --gf-your-hand-height: calc(90 * var(--op-size-unit));
+  --gf-header-padding: calc(5 * var(--op-size-unit));
+
+  display: grid;
+  grid-template-columns: 1fr var(--gf-game-feed-width);
+  grid-template-rows: 1fr var(--gf-your-hand-height);
+  height: 100vh;
+  overflow: auto;
+}
+
+.game-board,
+.game-feed,
+.your-books,
+.your-hand {
+  display: grid;
+  box-shadow: var(--op-border-all) var(--op-color-primary-base);
+  overflow: auto;
+}
+
+.your-books,
+.your-hand {
+  --your-header-height: calc(12 * var(--op-size-unit));
+  grid-template-columns: 1fr;
+  grid-template-rows: var(--your-header-height) 1fr;
+}
+
+.game-board {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.game-feed {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.your-hand {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.your-books {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.your-header {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  align-items: center;
+  padding-left: var(--gf-header-padding);
+  box-shadow: var(--op-border-bottom) var(--op-color-primary-base);
+}
+
+.your-header__text {
+  font-size: var(--op-font-x-large);
+}
