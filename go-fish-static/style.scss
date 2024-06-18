@@ -3,11 +3,16 @@
 
 
 .game-page {
+  --gf-panel-width: calc(120 * var(--op-size-unit));
+  --gf-panel-height: calc(64 * var(--op-size-unit));
   --gf-header-padding: calc(5 * var(--op-size-unit));
 
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 2fr 1fr;
+  grid-template-areas:
+    "game-baord game-feed"
+    "your-hand your-books";
+  grid-template-columns: 1fr var(--gf-panel-width);
+  grid-template-rows: 1fr var(--gf-panel-height);
   height: 100vh;
   overflow: auto;
 }
@@ -36,19 +41,19 @@
 }
 
 .game-board {
-  grid-area: 1 / 1 / 2 / 2;
+  grid-area: "game-baord";
 }
 
 .game-feed {
-  grid-area: 1 / 2 / 2 / 3;
+  grid-area: "game-feed";
 }
 
 .your-hand {
-  grid-area: 2 / 1 / 3 / 2;
+  grid-area: "your-hand";
 }
 
 .your-books {
-  grid-area: 2 / 2 / 3 / 3;
+  grid-area: "your-books";
 }
 
 // block headers
@@ -79,7 +84,9 @@
 
 // TODO: add overflow to all sections\
 .feed-section,
-.player-decks {
+.player-decks,
+.your-hand__cards,
+.your-books__cards {
   overflow: auto;
 }
 
@@ -119,6 +126,17 @@
 
 .accordion__label span {
   font-size: var(--op-font-medium);
+}
+
+.accordion-contents {
+  display: flex;
+  gap: var(--op-space-large);
+  padding: calc(.2 * var(--player-decks-padding));
+}
+
+.hand {
+  display: flex;
+  flex-grow: 1;
 }
 
 // game feed content
@@ -208,4 +226,23 @@
 .game-actions-btn {
   background-color: var(--op-color-primary-plus-three);
   font-size: var(--op-font-medium);
+}
+
+// Your hand content
+.your-hand__cards,
+.your-books__cards {
+  --your-padding: calc(5 * var(--op-size-unit));
+  padding: var(--your-padding);
+}
+
+.card-stack {
+  // TODO: convert to grid overlap
+  display: flex;
+}
+
+.card {
+  min-width: calc(15 * var(--op-size-unit));
+  aspect-ratio: 7 / 10;
+  position: relative;
+  background-color: var(--op-color-white);
 }
