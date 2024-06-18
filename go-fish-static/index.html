@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="/style.scss">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Go Fish</title>
+</head>
+
+<body>
+  <div class="app-with-sidebar">
+    <nav class="sidebar-primary sidebar--drawer sidebar--responsive">
+
+      <a class="sidebar__brand">Go Fish</a>
+
+      <div class="sidebar__content sidebar__content--start">
+        <button class="btn btn--no-border btn--active">Games</button>
+        <button class="btn btn--no-border">Stats</button>
+      </div>
+
+      <div class="sidebar__content sidebar__content--end">
+        <div class="divider"></div>
+        <div class="sidebar__btn-container">
+          <button class="btn btn--no-border">Profile</button>
+          <button class="btn btn--no-border">Log Out</button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="game">
+      <div class="game__overview">
+        <div class="game__display">
+          <div class="game__players">
+            <span class="section-title">Players</span>
+            <div class="player-accordions">
+              <details class="accordion">
+                <summary>
+                  <div class="accordion__label">
+                    <div class="text-pair text-pair--inline">
+                      <span class="text-pair__title">Player</span>
+                      <span class="text-pair__subtitle">1</span>
+                    </div>
+                    <div class="text-pair text-pair--inline">
+                      <span class="text-pair__title">Cards:</span>
+                      <span class="text-pair__subtitle">5</span>
+                    </div>
+                    <div class="text-pair text-pair--inline">
+                      <span class="text-pair__title">Books:</span>
+                      <span class="text-pair__subtitle">2</span>
+                    </div>
+                  </div>
+                  <span class="material-symbols-outlined">arrow_right</span>
+                </summary>
+                <div class="accordion__details">
+                  <div class="accordion-cards">
+                    <div class="card">Back</div>
+                    <div class="card">Back</div>
+                    <div class="card">Back</div>
+                    <div class="card">Back</div>
+                    <div class="card">Back</div>
+                  </div>
+                  <div class="accordion-book-cards">
+                    <div class="card">Front</div>
+                    <div class="card">Front</div>
+                  </div>
+                </div>
+              </details>
+
+              <details class="accordion">
+                <summary>
+                  <div class="accordion__label">
+                    <div class="text-pair text-pair--inline">
+                      <span class="text-pair__title">Player</span>
+                      <span class="text-pair__subtitle">2</span>
+                    </div>
+                    <div class="text-pair text-pair--inline">
+                      <span class="text-pair__title">Cards:</span>
+                      <span class="text-pair__subtitle">8</span>
+                    </div>
+                    <div class="text-pair text-pair--inline">
+                      <span class="text-pair__title">Books:</span>
+                      <span class="text-pair__subtitle">1</span>
+                    </div>
+                  </div>
+                  <span class="material-symbols-outlined">arrow_right</span>
+                </summary>
+                <div class="accordion__details">
+                  <div class="accordion-cards">
+                    <div class="card">Back</div>
+                    <div class="card">Back</div>
+                    <div class="card">Back</div>
+                    <div class="card">Back</div>
+                    <div class="card">Back</div>
+                    <div class="card">Back</div>
+                    <div class="card">Back</div>
+                    <div class="card">Back</div>
+                  </div>
+                  <div class="accordion-book-cards">
+                    <div class="card">Front</div>
+                  </div>
+                </div>
+              </details>
+
+              <details class="accordion">
+                <summary>
+                  <div class="accordion__label">
+                    <div class="text-pair text-pair--inline">
+                      <span class="text-pair__title">Player</span>
+                      <span class="text-pair__subtitle">3</span>
+                    </div>
+                    <div class="text-pair text-pair--inline">
+                      <span class="text-pair__title">Cards:</span>
+                      <span class="text-pair__subtitle">4</span>
+                    </div>
+                    <div class="text-pair text-pair--inline">
+                      <span class="text-pair__title">Books:</span>
+                      <span class="text-pair__subtitle">3</span>
+                    </div>
+                  </div>
+                  <span class="material-symbols-outlined">arrow_right</span>
+                </summary>
+                <div class="accordion__details">
+                  <div class="accordion-cards">
+                    <div class="card">Back</div>
+                    <div class="card">Back</div>
+                    <div class="card">Back</div>
+                    <div class="card">Back</div>
+                  </div>
+                  <div class="accordion-book-cards">
+                    <div class="card">Front</div>
+                    <div class="card">Front</div>
+                    <div class="card">Front</div>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <div class="game__ask-container">
+            <div class="game__ask-window">
+              <span class="section-title">Ask</span>
+              <button class="btn">Player 1</button>
+              <button class="btn">Player 2</button>
+              <button class="btn">Player 3</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="feed">
+          <span class="section-title">Game Feed</span>
+          <div class="feed__window">
+            <div class="feed__messages">
+              <p class="feed__text">Scott asks Hunter if they have any 8's</p>
+            </div>
+            <textarea class="feed__message-sender">Send a message...</textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="player__display">
+        <div class="player__display-hand">
+          <span class="section-title">Hand</span>
+          <div class="cards">
+            <div class="card">Front</div>
+            <div class="card">Front</div>
+            <div class="card">Front</div>
+            <div class="card">Front</div>
+            <div class="card">Front</div>
+            <div class="card">Front</div>
+          </div>
+        </div>
+
+        <div class="player__display-books">
+          <span class="section-title">Books</span>
+          <div class="book-cards">
+            <div class="card">Front</div>
+            <div class="card">Front</div>
+            <div class="card">Front</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

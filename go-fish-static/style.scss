@@ -1,0 +1,172 @@
+@import "@rolemodel/optics/dist/scss/optics.scss";
+
+.section-title {
+  font-size: var(--op-font-2x-large);
+}
+
+.divider {
+  background-color: var(--op-color-white);
+}
+
+.app-with-sidebar {
+  background-color: var(--op-color-background);
+}
+
+.sidebar__brand {
+  font-size: var(--op-font-large);
+}
+
+.sidebar__content--end {
+  align-items: center;
+  line-height: var(--op-line-height-base);
+}
+
+.sidebar__btn-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--op-space-large);
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--op-border-left) var(--op-color-white);
+}
+
+.game__overview {
+  height: 80%;
+  display: flex;
+}
+
+.game__display {
+  width: 70%;
+  box-shadow: var(--op-border-right) var(--op-color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: var(--op-space-large);
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  padding: var(--op-space-large);
+  justify-content: space-between;
+  width: 30%;
+}
+
+.game__players {
+  display: flex;
+  flex-direction: column;
+  padding: var(--op-space-large);
+  justify-content: flex-start;
+  width: 100%;
+  gap: var(--op-space-small);
+}
+
+.accordion {
+  box-shadow: var(--op-border-all) var(--op-color-white);
+  padding: var(--op-size-unit);
+}
+
+.accordion__details {
+  box-shadow: var(--op-border-top) var(--op-color-white);
+}
+
+.player-accordions,
+.accordion__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--op-space-x-small);
+}
+
+.accordion summary {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion__label {
+  display: flex;
+  justify-content: flex-start;
+  gap: var(--op-space-small);
+  width: 80%;
+}
+
+.accordion__details {
+  height: calc(30 * var(--op-size-unit));
+  display: flex;
+  flex-direction: column;
+  padding: var(--op-space-small);
+  gap: var(--op-space-small);
+}
+
+.accordion-cards,
+.accordion-book-cards {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  gap: var(--op-space-2x-small);
+}
+
+.game__ask-container {
+  display: flex;
+  justify-content: center;
+}
+
+.game__ask-window {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--op-color-on-background-alt);
+  padding: calc(7 * var(--op-size-unit));
+  gap: calc(2 * var(--op-size-unit));
+  width: 30%;
+}
+
+.feed__window {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  background-color: var(--op-color-on-background-alt);
+  padding: var(--op-space-small)
+}
+
+.player__display {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--op-space-large);
+  height: 20%;
+  gap: var(--op-space-small);
+  box-shadow: var(--op-border-top) var(--op-color-white);
+}
+
+.player__display-hand,
+.player__display-books {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.player__display-hand {
+  width: 70%;
+}
+
+.player__display-books {
+  width: 30%;
+}
+
+.cards,
+.book-cards {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: var(--op-space-2x-small);
+}
+
+.card {
+  aspect-ratio: 7 / 10;
+  position: relative;
+  background-color: var(--op-color-white);
+}
+
+// TODO: add minium height/width to card
