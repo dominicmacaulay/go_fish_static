@@ -3,13 +3,11 @@
 
 
 .game-page {
-  --gf-game-feed-width: calc(125 * var(--op-size-unit));
-  --gf-your-hand-height: calc(90 * var(--op-size-unit));
   --gf-header-padding: calc(5 * var(--op-size-unit));
 
   display: grid;
-  grid-template-columns: 1fr var(--gf-game-feed-width);
-  grid-template-rows: 1fr var(--gf-your-hand-height);
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 2fr 1fr;
   height: 100vh;
   overflow: auto;
 }
@@ -82,7 +80,44 @@
 
 // block content
 
-// TODO: add overflow to all sections
+// TODO: add overflow to all sections\
+.feed-section,
+.player-decks {
+  overflow: auto;
+}
+
+// game board content
+.player-decks {
+  --player-decks-padding: calc(12 * var(--op-size-unit));
+  display: flex;
+  flex-direction: column;
+  gap: var(--op-space-large);
+  padding: var(--player-decks-padding);
+}
+
+.player-decks-heading {
+  font-size: var(--op-font-2x-large);
+}
+
+.player-hands {
+  display: flex;
+  flex-direction: column;
+  gap: var(--op-space-x-small);
+}
+
+.player-hand {
+  box-shadow: var(--op-border-all) var(--op-color-primary-base);
+  padding: calc(.2 * var(--player-decks-padding));
+}
+
+.accordion__label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion__label span {
+  font-size: var(--op-font-medium);
+}
 
 // game feed content
 .feed-section {
@@ -91,6 +126,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: var(--feed-padding);
+  gap: var(--op-space-small);
 }
 
 // feed content
@@ -99,6 +135,7 @@
   flex-direction: column;
   gap: var(--op-space-small);
   align-items: flex-start;
+  overflow: auto;
 }
 
 .player-action {
@@ -117,11 +154,15 @@
 
 .first-response,
 .second-response {
+  display: flex;
+  align-items: center;
   padding: calc(.1 * var(--feed-padding));
 }
 
 .first-response-message,
 .second-response-message {
+  display: flex;
+  flex-wrap: wrap;
   padding: calc(.2 * var(--feed-padding));
   border-radius: var(--op-radius-x-large);
 }

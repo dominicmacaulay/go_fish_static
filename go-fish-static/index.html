@@ -9,7 +9,7 @@
   <title>Go Fish</title>
 </head>
 
-<body>
+<body class="app-body">
   <div class="game-page">
     <div class="game-board">
       <div class="game-header go-back">
@@ -18,7 +18,25 @@
       </div>
 
       <div class="player-decks">
+        <span class="player-decks-heading">Players</span>
 
+        <div class="player-hands">
+          <details class="accordion player-hand">
+            <summary>
+              <span class="material-symbols-outlined accordion__marker">arrow_right</span>
+              <div class="accordion__label">
+                <span class="accordian__label name">Dominic</span>
+                <div class="accordian__label hand-info">
+                  <span class="accordian__label cards">Cards: 7</span>
+                  <span class="accordian__label books">Books: 2</span>
+                </div>
+              </div>
+
+            </summary>
+            <div class="hand"></div>
+            <div class="books"></div>
+          </details>
+        </div>
       </div>
     </div>
 
