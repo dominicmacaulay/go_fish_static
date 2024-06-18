@@ -11,9 +11,19 @@
 
 <body>
   <div class="game-page">
-    <div class="game-board"> </div>
+    <div class="game-board">
+      <div class="game-header go-back">
+        <span class="material-symbols-outlined icon--outlined icon--x-large icon--weight-bold">arrow_back</span>
+        <span class="game-header__text">Game 1</span>
+      </div>
+    </div>
 
-    <div class="game-feed"> </div>
+    <div class="game-feed">
+      <div class="game-header show-turn">
+        <span class="game-header__text">Game Feed</span>
+        <div class="badge-info">Your Turn</div>
+      </div>
+    </div>
 
     <div class="your-hand">
       <div class="your-header">
@@ -27,6 +37,8 @@
       <div class="your-header">
         <div class="your-header__text">Your Books</div>
       </div>
+
+      <div class="your-books__cards"></div>
     </div>
   </div>
 </body>
