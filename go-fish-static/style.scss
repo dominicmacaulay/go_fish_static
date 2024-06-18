@@ -93,6 +93,7 @@
   padding: var(--feed-padding);
 }
 
+// feed content
 .feed-content {
   display: flex;
   flex-direction: column;
@@ -131,4 +132,37 @@
 
 .second-response-message {
   background-color: var(--op-color-primary-on-plus-seven-alt);
+}
+
+// game actions
+.game-actions {
+  display: flex;
+  flex-direction: column;
+  padding: calc(.6 * var(--feed-padding));
+  gap: var(--op-space-small);
+
+  background-color: var(--op-color-primary-base);
+  border-radius: var(--op-radius-large);
+}
+
+.action-options {
+  display: flex;
+  gap: var(--op-space-large);
+}
+
+.card-form,
+.player-form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: var(--op-space-x-small);
+}
+
+.form-label {
+  font-size: var(--op-font-large);
+}
+
+.game-actions-btn {
+  background-color: var(--op-color-primary-plus-three);
+  font-size: var(--op-font-x-large);
 }
