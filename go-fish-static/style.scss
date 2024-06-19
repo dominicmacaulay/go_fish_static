@@ -26,14 +26,6 @@
   --op-color-primary-h: 156;
   --op-color-primary-s: 58;
   --op-color-primary-l: 38;
-
-  --op-color-neutral-h: 156;
-  --op-color-neutral-s: 4;
-  --op-color-neutral-l: 38;
-}
-
-.app-body {
-  overflow: auto;
 }
 
 .game-page {
@@ -49,8 +41,6 @@
   grid-template-rows: 1fr var(--gf-panel-height);
   height: 100vh;
   overflow: auto;
-
-  background: var(--op-color-neutral-plus-max);
 }
 
 // first level blocks
@@ -87,6 +77,8 @@
 .your-books {
   grid-area: your-books;
   background: var(--op-color-neutral-plus-eight);
+  box-shadow: var(--op-border-top) var(--op-color-border);
+  box-shadow: var(--op-border-left) var(--op-color-border);
 }
 
 .your-hand,
@@ -94,12 +86,7 @@
   display: flex;
   padding-bottom: var(--op-space-x-small);
   flex-direction: column;
-  align-items: flex-start;
   gap: var(--op-space-medium);
-  flex-shrink: 0;
-
-  box-shadow: var(--op-border-top) var(--op-color-border);
-  box-shadow: var(--op-border-left) var(--op-color-border);
 }
 
 // block headers
@@ -115,30 +102,18 @@
 }
 
 .your-header {
-  display: flex;
-  padding: var(--op-space-small) var(--op-space-medium) var(--op-space-x-small) var(--op-space-medium);
-  align-items: flex-end;
-  align-self: stretch;
-
   border-bottom: var(--op-border-width) solid var(--op-color-border-color);
 }
 
 .go-back {
   gap: var(--op-space-x-small);
   padding-block: var(--op-space-2x-small);
-  padding-inline: var(--op-space-medium);
 
   border-bottom: var(--op-border-width) solid var(--op-color-border-color);
 }
 
 .show-turn {
-  display: flex;
-  height: var(--op-navbar-height);
-  padding: var(--op-space-small) var(--op-space-medium) var(--op-space-x-small) var(--op-space-medium);
   justify-content: space-between;
-  align-items: center;
-  flex-shrink: 0;
-  align-self: stretch;
 }
 
 .your-header__text,
@@ -167,9 +142,7 @@
 // block content
 
 .feed-section,
-.player-decks,
-.your-hand__cards,
-.your-books__cards {
+.player-decks {
   overflow: auto;
 }
 
@@ -200,17 +173,16 @@
   max-width: var(--op-breakpoint-medium);
   flex-direction: column;
   align-items: center;
-  align-self: stretch;
+  overflow: auto;
 }
 
 // accordion header
 .accordion summary {
   display: flex;
   height: var(--op-input-height-large);
-  padding: 0px var(--op-space-medium) 0px var(--op-space-x-small);
+  padding-inline: var(--op-space-medium) var(--op-space-x-small);
   align-items: center;
   gap: var(--op-space-x-large);
-  align-self: stretch;
 
   border-radius: var(--op-radius-medium) var(--op-radius-medium) 0px 0px;
   border: var(--op-border-width) solid var(--op-color-primary-plus-four);
@@ -242,7 +214,6 @@
 .player-cards {
   display: flex;
   padding: var(--op-space-small) var(--op-space-medium);
-  align-items: flex-start;
   gap: var(--op-space-x-large);
   align-self: stretch;
 
@@ -255,12 +226,13 @@
   background: var(--op-color-neutral-plus-eight);
 }
 
-.hand {
+.card-stack--hand {
   flex: 1 0 0;
 }
 
-.books {
-  justify-content: flex-end;
+.card-stack--books {
+  min-width: 25%;
+  flex: 0 1 0;
 }
 
 // game feed content
@@ -269,9 +241,7 @@
   padding: var(--op-space-medium);
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
   flex: 1 0 0;
-  align-self: stretch;
 }
 
 // feed content
@@ -281,7 +251,6 @@
   flex-direction: column;
   align-items: flex-start;
   gap: var(--op-space-x-small);
-  align-self: stretch;
   overflow: auto;
 }
 
@@ -290,8 +259,6 @@
   width: auto;
   padding: var(--op-space-small);
   justify-content: flex-end;
-  align-items: flex-start;
-  align-content: flex-start;
   flex-wrap: wrap;
 
   border-radius: var(--op-radius-x-large);
@@ -304,9 +271,7 @@
   padding: 0px var(--op-space-small);
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
   gap: var(--op-space-x-small);
-  align-self: stretch;
 }
 
 .first-response,
@@ -314,7 +279,6 @@
   display: flex;
   align-items: center;
   gap: var(--op-space-x-small);
-  align-self: stretch;
 }
 
 .first-response-message,
@@ -345,7 +309,6 @@
   padding: var(--op-space-small);
   flex-direction: column;
   gap: var(--op-space-small);
-  align-self: stretch;
 
   border-radius: var(--op-radius-x-large);
   border: var(--op-border-width) solid var(--op-color-primary-plus-six);
@@ -354,16 +317,13 @@
 
 .action-options {
   display: flex;
-  align-items: flex-end;
   gap: var(--op-space-small);
-  align-self: stretch;
 }
 
 .card-form,
 .player-form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 4px;
   flex: 1 0 0;
 }
@@ -379,7 +339,6 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  align-self: stretch;
 
   border-radius: 4px;
 }
@@ -387,9 +346,7 @@
 // Your hand content
 .your-hand__cards,
 .your-books__cards {
-  display: flex;
-  padding: 0px var(--op-space-medium);
-  overflow: auto;
+  padding-inline: var(--op-space-medium);
 }
 
 // all card stack and card content
@@ -403,7 +360,7 @@
   overflow: auto;
 }
 
-.card {
+.playing-card {
   border-radius: var(--op-radius-large);
   border: var(--op-border-width) solid var(--op-color-primary-base);
   box-shadow: var(--op-shadow-x-large);
