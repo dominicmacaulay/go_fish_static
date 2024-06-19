@@ -1,7 +1,7 @@
 @import "@rolemodel/optics/dist/scss/optics.scss";
 
 
-
+// TODO: set font color to the on version of the background every time background is set
 .game-page {
   --gf-panel-width: calc(120 * var(--op-size-unit));
   --gf-panel-height: calc(65 * var(--op-size-unit));
@@ -166,6 +166,7 @@
 .player-action {
   padding: calc(.3 *var(--feed-padding));
   background-color: var(--op-color-primary-plus-three);
+  color: var(--op-color-primary-on-plus-three-alt);
   border-radius: var(--op-radius-x-large);
   font-size: var(--op-font-medium);
 }
@@ -194,10 +195,12 @@
 
 .first-response-message {
   background-color: var(--op-color-alerts-warning-on-plus-max-alt);
+  color: var(--op-color-alerts-warning-plus-max);
 }
 
 .second-response-message {
   background-color: var(--op-color-primary-on-plus-seven-alt);
+  color: var(--op-color-primary-plus-seven);
 }
 
 // game actions
@@ -208,6 +211,7 @@
   gap: var(--op-space-small);
 
   background-color: var(--op-color-primary-base);
+  color: var(--op-color-primary-on-base);
   border-radius: var(--op-radius-large);
 }
 
@@ -230,6 +234,7 @@
 
 .game-actions-btn {
   background-color: var(--op-color-primary-plus-three);
+  color: var(--op-color-primary-on-plus-three-alt);
   font-size: var(--op-font-medium);
 }
 
@@ -240,6 +245,7 @@
   padding: var(--your-padding);
 }
 
+// all card stack and card content
 .card-stack {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(calc(10 * var(--op-size-unit)), calc(20 * var(--op-size-unit))));
@@ -264,6 +270,8 @@
   max-width: calc(50 * var(--op-size-unit));
   aspect-ratio: 7 / 10;
   background-color: var(--op-color-white);
+  color: var(--op-color-black);
+  box-shadow: var(--op-border-all) var(--op-color-primary-plus-max);
 }
 
 .game-board-cards {
