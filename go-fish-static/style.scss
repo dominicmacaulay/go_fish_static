@@ -1,11 +1,43 @@
 @import "@rolemodel/optics/dist/scss/optics.scss";
 
+:root[data-theme='figma-dominic'] {
+  --op-input-height-small: 4rem;
+  --op-input-height-medium: 5rem;
+  --op-input-height-large: 6rem;
+  --op-input-height-x-large: 8.4rem;
+
+  --op-radius-small: 0px;
+  --op-radius-medium: 0px;
+  --op-radius-large: 0px;
+  --op-radius-x-large: 0px;
+  --op-radius-2x-large: 0px;
+
+  --op-space-3x-small: calc(var(--op-space-scale-unit) * 0.4);
+  --op-space-2x-small: calc(var(--op-space-scale-unit) * 0.8);
+  --op-space-x-small: calc(var(--op-space-scale-unit) * 1.6);
+  --op-space-small: calc(var(--op-space-scale-unit) * 2.4);
+  --op-space-medium: calc(var(--op-space-scale-unit) * 3.2);
+  --op-space-large: calc(var(--op-space-scale-unit) * 4);
+  --op-space-x-large: calc(var(--op-space-scale-unit) * 4.8);
+  --op-space-2x-large: calc(var(--op-space-scale-unit) * 5.6);
+  --op-space-3x-large: calc(var(--op-space-scale-unit) * 8);
+  --op-space-4x-large: calc(var(--op-space-scale-unit) * 16);
+
+  --op-color-primary-h: 156;
+  --op-color-primary-s: 58;
+  --op-color-primary-l: 38;
+
+  --op-color-neutral-h: 156;
+  --op-color-neutral-s: 4;
+  --op-color-neutral-l: 38;
+}
+
 .app-body {
   overflow: auto;
 }
 
 .game-page {
-  --gf-panel-width: calc(120 * var(--op-size-unit));
+  --gf-panel-width: calc(100 * var(--op-size-unit));
   --gf-panel-height: calc(65 * var(--op-size-unit));
   --gf-header-padding: calc(5 * var(--op-size-unit));
 
@@ -17,6 +49,8 @@
   grid-template-rows: 1fr var(--gf-panel-height);
   height: 100vh;
   overflow: auto;
+
+  background: var(--op-color-neutral-plus-max);
 }
 
 // first level blocks
@@ -26,7 +60,6 @@
 .your-hand {
   display: grid;
   grid-template-columns: 1fr;
-  box-shadow: var(--op-border-all) var(--op-color-primary-base);
   overflow: auto;
 }
 
@@ -38,24 +71,42 @@
 
 .your-books,
 .your-hand {
-  --your-header-height: calc(12 * var(--op-size-unit));
-  grid-template-rows: var(--your-header-height) 1fr;
+  display: flex;
+  padding-bottom: var(--op-space-x-large);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--op-space-medium);
+  flex-shrink: 0;
 }
 
 .game-board {
-  grid-area: "game-baord";
+  grid-area: game-baord;
 }
 
 .game-feed {
-  grid-area: "game-feed";
+  grid-area: game-feed;
+  box-shadow: var(--op-border-left) var(--op-color-border);
+  background: var(--op-color-primary-plus-eight);
 }
 
 .your-hand {
-  grid-area: "your-hand";
+  grid-area: your-hand;
+  box-shadow: var(--op-border-top) var(--op-color-border);
 }
 
 .your-books {
-  grid-area: "your-books";
+  grid-area: your-books;
+
+  display: flex;
+  padding-bottom: var(--op-space-x-small);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--op-space-medium);
+  flex-shrink: 0;
+
+  box-shadow: var(--op-border-top) var(--op-color-border);
+  box-shadow: var(--op-border-left) var(--op-color-border);
+  background: var(--op-color-neutral-plus-eight);
 }
 
 // block headers
@@ -64,16 +115,27 @@
   grid-area: 1 / 1 / 2 / 2;
   display: flex;
   align-items: center;
-  box-shadow: var(--op-border-bottom) var(--op-color-primary-base);
+  box-shadow: var(--op-border-bottom) var(--op-color-border);
   padding-inline: var(--op-space-medium);
   padding-top: var(--op-space-small);
   padding-bottom: var(--op-space-x-small);
+}
+
+.your-header {
+  display: flex;
+  padding: var(--op-space-small) var(--op-space-medium) var(--op-space-x-small) var(--op-space-medium);
+  align-items: flex-end;
+  align-self: stretch;
+
+  border-bottom: var(--op-border-width) solid var(--op-color-border-color);
 }
 
 .go-back {
   gap: var(--op-space-x-small);
   padding-block: var(--op-space-2x-small);
   padding-inline: var(--op-space-medium);
+
+  border-bottom: var(--op-border-width) solid var(--op-color-border-color);
 }
 
 .show-turn {
@@ -88,7 +150,24 @@
 
 .your-header__text,
 .game-header__text {
+  color: var(--op-color-neutral-on-plus-eight-alt);
   font-size: var(--op-font-large);
+}
+
+.game-feed__text {
+  color: var(--op-color-primary-on-plus-eight-alt);
+}
+
+.badge-info {
+  display: flex;
+  padding: 4px 8px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+
+  border-radius: var(--op-radius-medium);
+  border: var(--op-border-width-x-large) solid var(--op-color-neutral-plus-max);
+  background: var(--op-color-primary-base);
 }
 
 // block content
@@ -102,7 +181,6 @@
 
 // game board content
 .player-decks {
-  --player-decks-padding: calc(12 * var(--op-size-unit));
   display: flex;
   flex-direction: column;
   gap: var(--op-space-x-small);
@@ -120,7 +198,6 @@
   display: flex;
   flex-direction: column;
   gap: var(--op-space-x-small);
-  padding-bottom: var(--op-space-4x-large);
 }
 
 // individual accordion
@@ -146,7 +223,7 @@
   background: var(--op-color-primary-plus-eight);
 }
 
-.accordion__label.name {
+.name {
   display: flex;
   align-items: center;
   gap: var(--op-space-x-small);
@@ -160,9 +237,11 @@
   gap: var(--op-space-x-large);
 }
 
-.accordion__label.name,
-.player-details {
+.name span,
+.cards,
+.books {
   font-size: var(--op-font-medium);
+  color: var(--op-color-primary-on-plus-eight);
 }
 
 // accordion contents
@@ -183,17 +262,11 @@
 }
 
 .hand {
-  display: flex;
-  align-items: center;
   flex: 1 0 0;
-  overflow: auto;
 }
 
 .books {
-  display: flex;
   justify-content: flex-end;
-  align-items: center;
-  overflow: auto;
 }
 
 // game feed content
@@ -229,6 +302,7 @@
 
   border-radius: var(--op-radius-x-large);
   background: var(--op-color-primary-plus-five);
+  color: var(--op-color-primary-on-plus-five-alt);
 }
 
 .action-responses {
@@ -259,14 +333,16 @@
 
 .first-response-message {
   border-radius: var(--op-radius-x-large);
-  border: var(--op-border-width) solid --op-color-alerts-warning-plus-five;
+  border: var(--op-border-width) solid var(--op-color-alerts-warning-plus-five);
   background: var(--op-color-alerts-warning-plus-seven);
+  color: var(--op-color-alerts-warning-on-plus-seven-alt);
 }
 
 .second-response-message {
   border-radius: var(--op-radius-x-large);
   border: var(--op-border-width) solid var(--op-color-primary-plus-seven);
   background: var(--op-color-primary-plus-max);
+  color: var(--op-color-primary-on-plus-max);
 }
 
 // game actions
@@ -274,8 +350,6 @@
   display: flex;
   padding: var(--op-space-small);
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
   gap: var(--op-space-small);
   align-self: stretch;
 
@@ -296,34 +370,31 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--op-space-scale-unit);
+  gap: 4px;
   flex: 1 0 0;
 }
 
 .form-label {
+  color: var(--op-color-primary-on-plus-seven);
   font-size: var(--op-font-x-small);
 }
 
-.game-actions-btn {
+.form-controls {
   display: flex;
-  height: --op-input-height-small;
-  padding: var(--Spacing-Scale---op-space-2x-small, 4px) var(--Spacing-Scale---op-space-x-small, 8px);
-  justify-content: center;
-  align-items: center;
-  gap: var(--Spacing-Scale---op-space-2x-small, 4px);
+  height: 28px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
   align-self: stretch;
 
-  border-radius: var(--Border-Radius---op-radius-medium, 4px);
-  border: 1px solid var(--op-color-primary-base);
-  background: var(--op-color-primary-base);
-  color: var(--op-color-primary-on-base);
+  border-radius: 4px;
 }
 
 // Your hand content
 .your-hand__cards,
 .your-books__cards {
-  --your-padding: calc(5 * var(--op-size-unit));
-  padding: var(--your-padding);
+  display: flex;
+  padding: 0px var(--op-space-medium);
   overflow: auto;
 }
 
@@ -331,30 +402,15 @@
 .card-stack {
   display: flex;
 
-  .card:not(:first-child) {
-    margin-left: calc(-5 * var(--op-size-unit));
+  >*:not(:first-child) {
+    margin-left: calc(-.5 * var(--op-space-2x-large));
   }
 
-  .card--your:not(:first-child) {
-    margin-left: calc(-15 * var(--op-size-unit));
-  }
-
-  padding: calc(1 * var(--op-space-2x-small));
   overflow: auto;
 }
 
 .card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: calc(15 * var(--op-size-unit));
-  // max-width: calc(25 * var(--op-size-unit));
-  aspect-ratio: 7 / 10;
-  background-color: var(--op-color-white);
-  color: var(--op-color-black);
-  box-shadow: var(--op-border-all) var(--op-color-primary-minus-max);
-}
-
-.card--your {
-  min-width: calc(36 * var(--op-size-unit));
+  border-radius: var(--op-radius-large);
+  border: var(--op-border-width) solid var(--op-color-primary-base);
+  box-shadow: var(--op-shadow-x-large);
 }
