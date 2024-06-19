@@ -1,5 +1,8 @@
 @import "@rolemodel/optics/dist/scss/optics.scss";
 
+.app-body {
+  overflow: auto;
+}
 
 // TODO: set font color to the on version of the background every time background is set
 .game-page {
@@ -137,11 +140,17 @@
   gap: var(--op-space-large);
   padding: calc(.2 * var(--player-decks-padding));
   box-shadow: var(--op-border-top) var(--op-color-primary-base);
+  overflow: auto;
 }
 
 .hand {
   display: flex;
   flex-grow: 1;
+  overflow: auto;
+}
+
+.books {
+  overflow: auto;
 }
 
 // game feed content
@@ -243,38 +252,37 @@
 .your-books__cards {
   --your-padding: calc(5 * var(--op-size-unit));
   padding: var(--your-padding);
+  overflow: auto;
 }
 
 // all card stack and card content
 .card-stack {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc(10 * var(--op-size-unit)), calc(20 * var(--op-size-unit))));
-  grid-auto-flow: column;
-}
+  display: flex;
 
-.game-board-card-stack {
-  grid-template-columns: repeat(auto-fit, minmax(calc(5 * var(--op-size-unit)), calc(10 * var(--op-size-unit))));
-}
+  .card:not(:first-child) {
+    margin-left: calc(-5 * var(--op-size-unit));
+  }
 
-.game-board-card-stack-books {
-  direction: rtl;
-}
+  .card--your:not(:first-child) {
+    margin-left: calc(-15 * var(--op-size-unit));
+  }
 
-.card-stack :nth-child(1) {
-  grid-column: span 1;
+  padding: calc(1 * var(--op-space-2x-small));
+  overflow: auto;
 }
 
 .card {
-  grid-column: span 1.5;
-  min-width: calc(30 * var(--op-size-unit));
-  max-width: calc(50 * var(--op-size-unit));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: calc(15 * var(--op-size-unit));
+  // max-width: calc(25 * var(--op-size-unit));
   aspect-ratio: 7 / 10;
   background-color: var(--op-color-white);
   color: var(--op-color-black);
-  box-shadow: var(--op-border-all) var(--op-color-primary-plus-max);
+  box-shadow: var(--op-border-all) var(--op-color-primary-minus-max);
 }
 
-.game-board-cards {
-  min-width: calc(15 * var(--op-size-unit));
-  max-width: calc(25 * var(--op-size-unit));
+.card--your {
+  min-width: calc(36 * var(--op-size-unit));
 }
