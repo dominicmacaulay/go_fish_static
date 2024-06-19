@@ -111,7 +111,12 @@
 
 .player-hand {
   box-shadow: var(--op-border-all) var(--op-color-primary-base);
-  padding: calc(.2 * var(--player-decks-padding));
+  padding-inline: calc(.2 * var(--player-decks-padding));
+  padding-top: calc(.2 * var(--player-decks-padding));
+}
+
+.accordion summary {
+  padding-bottom: calc(.2 * var(--player-decks-padding));
 }
 
 .accordion__label {
@@ -132,6 +137,7 @@
   display: flex;
   gap: var(--op-space-large);
   padding: calc(.2 * var(--player-decks-padding));
+  box-shadow: var(--op-border-top) var(--op-color-primary-base);
 }
 
 .hand {
@@ -237,12 +243,22 @@
 
 .card-stack {
   // TODO: convert to grid overlap
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc(15 * var(--op-size-unit)), calc(25 * var(--op-size-unit))));
+  grid-auto-flow: column;
+}
+
+.game-board-card-stack {
+  grid-template-columns: repeat(auto-fit, minmax(calc(15 * var(--op-size-unit)), calc(20 * var(--op-size-unit))));
 }
 
 .card {
   min-width: calc(15 * var(--op-size-unit));
+  max-width: calc(25 * var(--op-size-unit));
   aspect-ratio: 7 / 10;
-  position: relative;
   background-color: var(--op-color-white);
+}
+
+.game-board-cards {
+  max-width: calc(20 * var(--op-size-unit));
 }
