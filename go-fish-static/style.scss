@@ -77,7 +77,13 @@
 }
 
 .show-turn {
+  display: flex;
+  height: var(--op-navbar-height);
+  padding: var(--op-space-small) var(--op-space-medium) var(--op-space-x-small) var(--op-space-medium);
   justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  align-self: stretch;
 }
 
 .your-header__text,
@@ -192,96 +198,125 @@
 
 // game feed content
 .feed-section {
-  --feed-padding: calc(10 * var(--op-size-unit));
   display: flex;
+  padding: var(--op-space-medium);
   flex-direction: column;
   justify-content: space-between;
-  padding: var(--feed-padding);
-  gap: var(--op-space-small);
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
 }
 
 // feed content
 .feed-content {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
-  gap: var(--op-space-small);
   align-items: flex-start;
+  gap: var(--op-space-x-small);
+  align-self: stretch;
   overflow: auto;
 }
 
 .player-action {
-  padding: calc(.3 *var(--feed-padding));
-  background-color: var(--op-color-primary-plus-three);
-  color: var(--op-color-primary-on-plus-three-alt);
+  display: flex;
+  width: auto;
+  padding: var(--op-space-small);
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+
   border-radius: var(--op-radius-x-large);
-  font-size: var(--op-font-medium);
+  background: var(--op-color-primary-plus-five);
 }
 
 .action-responses {
   display: flex;
+  padding: 0px var(--op-space-small);
   flex-direction: column;
-  padding: calc(.4 * var(--feed-padding));
-  gap: var(--op-space-small);
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--op-space-x-small);
+  align-self: stretch;
 }
 
 .first-response,
 .second-response {
   display: flex;
   align-items: center;
-  padding: calc(.1 * var(--feed-padding));
+  gap: var(--op-space-x-small);
+  align-self: stretch;
 }
 
 .first-response-message,
 .second-response-message {
   display: flex;
-  flex-wrap: wrap;
-  padding: calc(.2 * var(--feed-padding));
-  border-radius: var(--op-radius-x-large);
+  padding: var(--op-space-small);
+  align-items: center;
+  flex: 1 0 0;
 }
 
 .first-response-message {
-  background-color: var(--op-color-alerts-warning-on-plus-max-alt);
-  color: var(--op-color-alerts-warning-plus-max);
+  border-radius: var(--op-radius-x-large);
+  border: var(--op-border-width) solid --op-color-alerts-warning-plus-five;
+  background: var(--op-color-alerts-warning-plus-seven);
 }
 
 .second-response-message {
-  background-color: var(--op-color-primary-on-plus-seven-alt);
-  color: var(--op-color-primary-plus-seven);
+  border-radius: var(--op-radius-x-large);
+  border: var(--op-border-width) solid var(--op-color-primary-plus-seven);
+  background: var(--op-color-primary-plus-max);
 }
 
 // game actions
 .game-actions {
   display: flex;
+  padding: var(--op-space-small);
   flex-direction: column;
-  padding: calc(.3 * var(--feed-padding));
+  justify-content: flex-end;
+  align-items: flex-end;
   gap: var(--op-space-small);
+  align-self: stretch;
 
-  background-color: var(--op-color-primary-base);
-  color: var(--op-color-primary-on-base);
-  border-radius: var(--op-radius-large);
+  border-radius: var(--op-radius-x-large);
+  border: var(--op-border-width) solid var(--op-color-primary-plus-six);
+  background: var(--op-color-primary-plus-seven);
 }
 
 .action-options {
   display: flex;
-  gap: var(--op-space-large);
+  align-items: flex-end;
+  gap: var(--op-space-small);
+  align-self: stretch;
 }
 
 .card-form,
 .player-form {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  gap: var(--op-space-x-small);
+  align-items: flex-start;
+  gap: var(--op-space-scale-unit);
+  flex: 1 0 0;
 }
 
 .form-label {
-  font-size: var(--op-font-medium);
+  font-size: var(--op-font-x-small);
 }
 
 .game-actions-btn {
-  background-color: var(--op-color-primary-plus-three);
-  color: var(--op-color-primary-on-plus-three-alt);
-  font-size: var(--op-font-medium);
+  display: flex;
+  height: --op-input-height-small;
+  padding: var(--Spacing-Scale---op-space-2x-small, 4px) var(--Spacing-Scale---op-space-x-small, 8px);
+  justify-content: center;
+  align-items: center;
+  gap: var(--Spacing-Scale---op-space-2x-small, 4px);
+  align-self: stretch;
+
+  border-radius: var(--Border-Radius---op-radius-medium, 4px);
+  border: 1px solid var(--op-color-primary-base);
+  background: var(--op-color-primary-base);
+  color: var(--op-color-primary-on-base);
 }
 
 // Your hand content
