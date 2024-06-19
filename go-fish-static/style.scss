@@ -4,7 +4,7 @@
 
 .game-page {
   --gf-panel-width: calc(120 * var(--op-size-unit));
-  --gf-panel-height: calc(64 * var(--op-size-unit));
+  --gf-panel-height: calc(65 * var(--op-size-unit));
   --gf-header-padding: calc(5 * var(--op-size-unit));
 
   display: grid;
@@ -82,7 +82,6 @@
 
 // block content
 
-// TODO: add overflow to all sections\
 .feed-section,
 .player-decks,
 .your-hand__cards,
@@ -242,23 +241,32 @@
 }
 
 .card-stack {
-  // TODO: convert to grid overlap
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc(15 * var(--op-size-unit)), calc(25 * var(--op-size-unit))));
+  grid-template-columns: repeat(auto-fit, minmax(calc(10 * var(--op-size-unit)), calc(20 * var(--op-size-unit))));
   grid-auto-flow: column;
 }
 
 .game-board-card-stack {
-  grid-template-columns: repeat(auto-fit, minmax(calc(15 * var(--op-size-unit)), calc(20 * var(--op-size-unit))));
+  grid-template-columns: repeat(auto-fit, minmax(calc(5 * var(--op-size-unit)), calc(10 * var(--op-size-unit))));
+}
+
+.game-board-card-stack-books {
+  direction: rtl;
+}
+
+.card-stack :nth-child(1) {
+  grid-column: span 1;
 }
 
 .card {
-  min-width: calc(15 * var(--op-size-unit));
-  max-width: calc(25 * var(--op-size-unit));
+  grid-column: span 1.5;
+  min-width: calc(30 * var(--op-size-unit));
+  max-width: calc(50 * var(--op-size-unit));
   aspect-ratio: 7 / 10;
   background-color: var(--op-color-white);
 }
 
 .game-board-cards {
-  max-width: calc(20 * var(--op-size-unit));
+  min-width: calc(15 * var(--op-size-unit));
+  max-width: calc(25 * var(--op-size-unit));
 }
