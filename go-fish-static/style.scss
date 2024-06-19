@@ -4,7 +4,6 @@
   overflow: auto;
 }
 
-// TODO: set font color to the on version of the background every time background is set
 .game-page {
   --gf-panel-width: calc(120 * var(--op-size-unit));
   --gf-panel-height: calc(65 * var(--op-size-unit));
@@ -65,17 +64,20 @@
   grid-area: 1 / 1 / 2 / 2;
   display: flex;
   align-items: center;
-  padding-left: var(--gf-header-padding);
   box-shadow: var(--op-border-bottom) var(--op-color-primary-base);
+  padding-inline: var(--op-space-medium);
+  padding-top: var(--op-space-small);
+  padding-bottom: var(--op-space-x-small);
 }
 
 .go-back {
-  gap: var(--op-space-large);
+  gap: var(--op-space-x-small);
+  padding-block: var(--op-space-2x-small);
+  padding-inline: var(--op-space-medium);
 }
 
 .show-turn {
   justify-content: space-between;
-  padding-right: var(--gf-header-padding);
 }
 
 .your-header__text,
@@ -97,59 +99,94 @@
   --player-decks-padding: calc(12 * var(--op-size-unit));
   display: flex;
   flex-direction: column;
-  gap: var(--op-space-large);
-  padding: var(--player-decks-padding);
+  gap: var(--op-space-x-small);
+  padding-inline: var(--op-space-3x-large);
+  padding-top: var(--op-space-2x-large);
+  padding-bottom: var(--op-space-4x-large);
 }
 
 .player-decks-heading {
   font-size: var(--op-font-large);
 }
 
+// accordion container
 .player-hands {
   display: flex;
   flex-direction: column;
   gap: var(--op-space-x-small);
+  padding-bottom: var(--op-space-4x-large);
 }
 
+// individual accordion
 .player-hand {
-  box-shadow: var(--op-border-all) var(--op-color-primary-base);
-  padding-inline: calc(.2 * var(--player-decks-padding));
-  padding-top: calc(.2 * var(--player-decks-padding));
+  display: flex;
+  max-width: var(--op-breakpoint-medium);
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
 }
 
+// accordion header
 .accordion summary {
-  padding-bottom: calc(.2 * var(--player-decks-padding));
-}
-
-.accordion__label {
   display: flex;
-  justify-content: space-between;
+  height: var(--op-input-height-large);
+  padding: 0px var(--op-space-medium) 0px var(--op-space-x-small);
+  align-items: center;
+  gap: var(--op-space-x-large);
+  align-self: stretch;
+
+  border-radius: var(--op-radius-medium) var(--op-radius-medium) 0px 0px;
+  border: var(--op-border-width) solid var(--op-color-primary-plus-four);
+  background: var(--op-color-primary-plus-eight);
 }
 
-.hand-info {
+.accordion__label.name {
   display: flex;
-  gap: var(--op-space-small);
+  align-items: center;
+  gap: var(--op-space-x-small);
+  flex: 1 0 0;
 }
 
-.accordion__label span {
+.player-details {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--op-space-x-large);
+}
+
+.accordion__label.name,
+.player-details {
   font-size: var(--op-font-medium);
 }
 
-.accordion-contents {
+// accordion contents
+.player-cards {
   display: flex;
-  gap: var(--op-space-large);
-  padding: calc(.2 * var(--player-decks-padding));
-  box-shadow: var(--op-border-top) var(--op-color-primary-base);
+  padding: var(--op-space-small) var(--op-space-medium);
+  align-items: flex-start;
+  gap: var(--op-space-x-large);
+  align-self: stretch;
+
   overflow: auto;
+
+  border-radius: 0px 0px var(--op-radius-medium) var(--op-radius-medium);
+  border-right: var(--op-border-width) solid var(--op-color-primary-plus-four);
+  border-bottom: var(--op-border-width) solid var(--op-color-primary-plus-four);
+  border-left: var(--op-border-width) solid var(--op-color-primary-plus-four);
+  background: var(--op-color-neutral-plus-eight);
 }
 
 .hand {
   display: flex;
-  flex-grow: 1;
+  align-items: center;
+  flex: 1 0 0;
   overflow: auto;
 }
 
 .books {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   overflow: auto;
 }
 
