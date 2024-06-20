@@ -1,7 +1,7 @@
 @import "@rolemodel/optics/dist/scss/optics.scss";
 
 .game-board {
-    grid-area: game-baord;
+    grid-area: game-board;
     display: grid;
     grid-template-columns: 1fr;
     overflow: auto;
@@ -22,8 +22,7 @@
 
         box-shadow: var(--op-border-bottom) var(--op-color-border);
 
-
-        .game-header span {
+        span {
             font-size: var(--op-font-large);
         }
     }

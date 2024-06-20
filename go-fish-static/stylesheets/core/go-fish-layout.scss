@@ -7,7 +7,7 @@
 
     display: grid;
     grid-template-areas:
-        "game-baord game-feed"
+        "game-board game-feed"
         "your-hand your-books";
     grid-template-columns: 1fr var(--gf-panel-width);
     grid-template-rows: 1fr var(--gf-panel-height);
@@ -53,16 +53,7 @@
     padding-inline: var(--op-space-medium);
     padding-top: var(--op-space-small);
     padding-bottom: var(--op-space-x-small);
-}
-
-.your-header {
     box-shadow: var(--op-border-bottom) var(--op-color-border);
-}
-
-.your-header {
     font-size: var(--op-font-large);
-}
-
-.your-header {
     color: var(--op-color-primary-on-plus-eight-alt);
 }
