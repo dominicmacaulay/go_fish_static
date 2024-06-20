@@ -16,17 +16,11 @@
 }
 
 // first level blocks
-.game-feed,
 .your-books,
 .your-hand {
     display: grid;
     grid-template-columns: 1fr;
     overflow: auto;
-}
-
-.game-feed {
-    --game-header-height: calc(15 * var(--op-size-unit));
-    grid-template-rows: var(--game-header-height) 1fr;
 }
 
 .your-hand,
@@ -35,12 +29,6 @@
     padding-bottom: var(--op-space-x-small);
     flex-direction: column;
     gap: var(--op-space-medium);
-}
-
-.game-feed {
-    grid-area: game-feed;
-    box-shadow: var(--op-border-left) var(--op-color-border);
-    background: var(--op-color-primary-plus-eight);
 }
 
 .your-hand {
@@ -57,7 +45,6 @@
 
 
 // block headers
-.game-header,
 .your-header {
     grid-area: 1 / 1 / 2 / 2;
     display: flex;
@@ -72,27 +59,10 @@
     box-shadow: var(--op-border-bottom) var(--op-color-border);
 }
 
-.game-feed__header {
-    justify-content: space-between;
-}
-
 .your-header {
     font-size: var(--op-font-large);
 }
 
-.game-feed span,
 .your-header {
     color: var(--op-color-primary-on-plus-eight-alt);
-}
-
-.turn-info-badge {
-    display: flex;
-    padding: 4px 8px;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 8px;
-
-    border-radius: var(--op-radius-medium);
-    box-shadow: var(--op-border-all) var(--op-color-neutral-plus-max);
-    background: var(--op-color-primary-base);
 }
