@@ -2,15 +2,9 @@
 
 // block content
 
-.feed-section,
-.player-decks {
-  overflow: auto;
-}
 
 // game board content
 .player-decks {
-  display: flex;
-  flex-direction: column;
   gap: var(--op-space-x-small);
   padding-inline: var(--op-space-3x-large);
   padding-top: var(--op-space-2x-large);
@@ -101,73 +95,8 @@
   height: 80%;
 }
 
-// game feed content
-.feed-section {
-  display: flex;
-  padding: var(--op-space-medium);
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 1 0 0;
-}
 
-// feed content
-.feed-content {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--op-space-x-small);
-  overflow: auto;
-}
 
-.player-action {
-  display: flex;
-  width: auto;
-  padding: var(--op-space-small);
-  justify-content: flex-end;
-  flex-wrap: wrap;
-
-  border-radius: var(--op-radius-x-large);
-  background-color: var(--op-color-primary-plus-five);
-  color: var(--op-color-primary-on-plus-five-alt);
-}
-
-.action-responses {
-  display: flex;
-  padding: 0px var(--op-space-small);
-  flex-direction: column;
-  justify-content: center;
-  gap: var(--op-space-x-small);
-}
-
-.first-response,
-.second-response {
-  display: flex;
-  align-items: center;
-  gap: var(--op-space-x-small);
-}
-
-.first-response-message,
-.second-response-message {
-  display: flex;
-  padding: var(--op-space-small);
-  align-items: center;
-  flex: 1 0 0;
-}
-
-.first-response-message {
-  border-radius: var(--op-radius-x-large);
-  box-shadow: var(--op-border-all) var(--op-color-alerts-warning-plus-five);
-  background: var(--op-color-alerts-warning-plus-seven);
-  color: var(--op-color-alerts-warning-on-plus-seven-alt);
-}
-
-.second-response-message {
-  border-radius: var(--op-radius-x-large);
-  box-shadow: var(--op-border-all) var(--op-color-primary-plus-seven);
-  background: var(--op-color-primary-plus-max);
-  color: var(--op-color-primary-on-plus-max);
-}
 
 // game actions
 .game-actions {

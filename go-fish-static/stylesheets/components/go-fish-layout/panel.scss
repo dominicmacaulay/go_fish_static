@@ -18,4 +18,11 @@
         padding-top: var(--op-space-small);
         padding-bottom: var(--op-space-x-small);
     }
+
+    .panel__content {
+        display: flex;
+        padding: var(--op-space-medium);
+        flex-direction: column;
+        overflow: auto;
+    }
 }

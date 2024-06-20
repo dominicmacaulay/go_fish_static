@@ -23,4 +23,8 @@
             background: var(--op-color-primary-base);
         }
     }
+
+    .panel__content--game-feed {
+        justify-content: space-between;
+    }
 }

@@ -17,7 +17,7 @@
         <span>Game 1</span>
       </div>
 
-      <div class="player-decks">
+      <div class="panel__content player-decks">
         <span class="player-decks-heading">Players</span>
 
         <div class="player-hands">
@@ -123,21 +123,22 @@
         <div class="turn-info-badge">Your Turn</div>
       </div>
 
-      <div class="feed-section">
-        <div class="feed-content">
-          <span class="player-action">Scott Asked Dominic for any 8's</span>
-
-          <div class="action-responses">
-            <div class="first-response">
-              <span class="material-symbols-outlined icon--x-large icon--weight-bold">subdirectory_arrow_right</span>
-              <span class="first-response-message">Go Fish! Dominic did not have any 8's</span>
-            </div>
-
-            <div class="second-response">
-              <span class="material-symbols-outlined icon--x-large icon--weight-bold">subdirectory_arrow_right</span>
-              <span class="second-response-message">You drew a 7 of Diamonds</span>
-            </div>
+      <div class="panel__content panel__content--game-feed">
+        <div class="notifications">
+          <div class="notifications__message notifications__message--player-action">
+            <span>Scott Asked Dominic for any 8's</span>
           </div>
+
+          <div class="notifications__message">
+            <span class="material-symbols-outlined icon--x-large icon--weight-bold">subdirectory_arrow_right</span>
+            <span class="message__first-response">Go Fish! Dominic did not have any 8's</span>
+          </div>
+
+          <div class="notifications__message">
+            <span class="material-symbols-outlined icon--x-large icon--weight-bold">subdirectory_arrow_right</span>
+            <span class="message__second-response">You drew a 7 of Diamonds</span>
+          </div>
+
         </div>
 
         <div class="game-actions">
@@ -171,15 +172,17 @@
         <span>Your Hand</span>
       </div>
 
-      <div class="your-hand__cards card-stack">
-        <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
-        <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
-        <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
-        <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
-        <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
-        <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
-        <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
-        <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+      <div class="panel__content">
+        <div class="your-hand__cards card-stack">
+          <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+          <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+          <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+          <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+          <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+          <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+          <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+          <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+        </div>
       </div>
     </div>
 
@@ -188,9 +191,11 @@
         <span>Your Books</span>
       </div>
 
-      <div class="your-books__cards card-stack">
-        <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
-        <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+      <div class="panel__content">
+        <div class="your-books__cards card-stack">
+          <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+          <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+        </div>
       </div>
     </div>
   </div>

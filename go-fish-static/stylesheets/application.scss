@@ -1,12 +1,21 @@
+// optics
 @import "@rolemodel/optics/dist/scss/optics.scss";
+
+// themes
 @import 'core/themes/figma-theme-core.scss';
 @import 'core/themes/figma-theme-dark.scss';
+
+// standard layout
 @import 'core/go-fish-layout.scss';
 
-@import 'components/panel.scss';
-@import 'components/game-board.scss';
-@import 'components/game-feed.scss';
-@import 'components/your-hand.scss';
-@import 'components/your-books.scss';
+// general go fish layout components
+@import 'components/go-fish-layout/panel.scss';
+@import 'components/go-fish-layout/game-board.scss';
+@import 'components/go-fish-layout/game-feed.scss';
+@import 'components/go-fish-layout/your-hand.scss';
+@import 'components/go-fish-layout/your-books.scss';
+
+// content components
+@import 'components/go-fish-content/notifications.scss';
 
 @import './style.scss';

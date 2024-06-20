@@ -1,13 +1,12 @@
 @import "@rolemodel/optics/dist/scss/optics.scss";
 
-.panel--your-books {
-    grid-area: your-books;
-    background: var(--op-color-neutral-plus-eight);
+.panel--your-hand {
+    grid-area: your-hand;
 
     padding-bottom: var(--op-space-x-small);
     gap: var(--op-space-medium);
 
-    .panel__header--your-books {
+    .panel__header--your-hand span {
         font-size: var(--op-font-large);
         color: var(--op-color-primary-on-plus-eight-alt);
     }
