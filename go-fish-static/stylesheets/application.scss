@@ -1,5 +1,6 @@
 @import "@rolemodel/optics/dist/scss/optics.scss";
-@import 'core/themes/figma-theme.scss';
+@import 'core/themes/figma-theme-core.scss';
+@import 'core/themes/figma-theme-dark.scss';
 @import 'core/go-fish-layout.scss';
 
 @import 'components/game-board.scss';
