@@ -3,11 +3,12 @@
 .panel--your-hand {
     grid-area: your-hand;
 
-    padding-bottom: var(--op-space-x-small);
-    gap: var(--op-space-medium);
-
-    .panel__header--your-hand span {
+    .panel__header--your-hand {
         font-size: var(--op-font-large);
         color: var(--op-color-primary-on-plus-eight-alt);
+    }
+
+    .panel__content--your-hand {
+        padding-bottom: var(--op-space-x-small);
     }
 }

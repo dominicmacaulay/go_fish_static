@@ -4,8 +4,16 @@
     grid-area: your-books;
     background-color: var(--op-color-neutral-plus-eight);
 
-    .panel__header--your-books span {
+    .panel__header--your-books {
         font-size: var(--op-font-large);
         color: var(--op-color-primary-on-plus-eight-alt);
+    }
+
+    .panel__content--your-books {
+        padding-bottom: var(--op-space-x-small);
+
+        .card-stack--your-books {
+            height: calc(30 * var(--op-size-unit));
+        }
     }
 }

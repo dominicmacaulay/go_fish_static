@@ -65,6 +65,8 @@
 }
 
 // accordion contents
+// TODO: change the card stack container to be a grid: 1f auto; or 4f 1f;
+
 .player-cards {
   display: flex;
   padding: var(--op-space-small) var(--op-space-medium);
@@ -92,7 +94,8 @@
 }
 
 .card-stack--books {
-  height: 80%;
+  // TODO: fix the height
+  height: calc(25 * var(--op-size-unit)); // 44px
 }
 
 
@@ -105,25 +108,6 @@
 
 
 
-// Your hand content
-.your-hand__cards,
-.your-books__cards {
-  padding-inline: var(--op-space-medium);
-}
+
 
 // all card stack and card content
-.card-stack {
-  display: flex;
-
-  >*:not(:first-child) {
-    margin-left: calc(-.5 * var(--op-space-2x-large));
-  }
-
-  overflow: auto;
-}
-
-.playing-card {
-  border-radius: var(--op-radius-large);
-  box-shadow: var(--op-border-all) var(--op-color-primary-base);
-  box-shadow: var(--op-shadow-x-large);
-}
