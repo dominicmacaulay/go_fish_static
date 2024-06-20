@@ -9,11 +9,7 @@
 @import 'core/go-fish-layout.scss';
 
 // general go fish layout components
-@import 'components/go-fish-layout/panel.scss';
-@import 'components/go-fish-layout/game-board.scss';
-@import 'components/go-fish-layout/game-feed.scss';
-@import 'components/go-fish-layout/your-hand.scss';
-@import 'components/go-fish-layout/your-books.scss';
+@import 'components/panel.scss';
 
 // content components
 @import 'components/go-fish-content/notifications.scss';

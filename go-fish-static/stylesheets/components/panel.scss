@@ -1,0 +1,99 @@
+@import "@rolemodel/optics/dist/scss/optics.scss";
+
+// TODO: pull in modifiers
+.panel {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: calc(15 * var(--op-size-unit)) 1fr;
+    overflow: auto;
+
+    box-shadow: var(--op-border-all) var(--op-color-border);
+
+    // modifiers
+    &.panel--game-board {
+        grid-area: game-board;
+    }
+
+    &.panel--game-feed {
+        grid-area: game-feed;
+        background-color: var(--op-color-primary-plus-eight);
+    }
+
+    &.panel--your-hand {
+        grid-area: your-hand;
+    }
+
+    &.panel--your-books {
+        grid-area: your-books;
+        background-color: var(--op-color-neutral-plus-eight);
+    }
+
+    // children
+    .panel__header {
+        grid-area: 1 / 1 / 2 / 2;
+        display: flex;
+        align-items: center;
+
+        box-shadow: var(--op-border-bottom) var(--op-color-border);
+        padding-inline: var(--op-space-medium);
+        padding-top: var(--op-space-small);
+        padding-bottom: var(--op-space-x-small);
+
+        // modifiers
+        &.panel__header--game-board {
+            gap: var(--op-space-x-small);
+            padding-block: var(--op-space-2x-small);
+
+            span {
+                font-size: var(--op-font-large);
+            }
+        }
+
+        &.panel__header--game-feed {
+            justify-content: space-between;
+
+            span {
+                color: var(--op-color-primary-on-plus-eight-alt);
+            }
+
+            .turn-info-badge {
+                display: flex;
+                padding: 4px 8px;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 8px;
+
+                border-radius: var(--op-radius-medium);
+                box-shadow: var(--op-border-all) var(--op-color-neutral-plus-max);
+                background-color: var(--op-color-primary-base);
+            }
+        }
+
+        &.panel__header--your-hand,
+        &.panel__header--your-books {
+            font-size: var(--op-font-large);
+            color: var(--op-color-primary-on-plus-eight-alt);
+        }
+    }
+
+    .panel__content {
+        display: grid;
+        padding: var(--op-space-medium);
+        overflow: auto;
+
+        // modifiers
+        &.panel__content--game-board {
+            align-content: start;
+            gap: var(--op-space-x-small);
+        }
+
+        &.panel__content--game-feed {
+            justify-content: space-between;
+        }
+
+        &.panel__content--your-hand,
+        &.panel__content--your-books {
+            padding-bottom: var(--op-space-x-small);
+        }
+    }
+}
