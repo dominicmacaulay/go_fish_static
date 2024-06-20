@@ -1,5 +1,6 @@
 @import "@rolemodel/optics/dist/scss/optics.scss";
 
+// TODO: pull in modifiers
 .panel {
     display: grid;
     grid-template-columns: 1fr;
@@ -20,9 +21,8 @@
     }
 
     .panel__content {
-        display: flex;
+        display: grid;
         padding: var(--op-space-medium);
-        flex-direction: column;
         overflow: auto;
     }
 }

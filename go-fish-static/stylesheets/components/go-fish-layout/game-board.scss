@@ -11,4 +11,9 @@
             font-size: var(--op-font-large);
         }
     }
+
+    .panel__content--game-board {
+        align-content: start;
+        gap: var(--op-space-x-small);
+    }
 }
