@@ -1,0 +1,112 @@
+@import "@rolemodel/optics/dist/scss/optics.scss";
+
+.game-page {
+    --gf-panel-width: calc(100 * var(--op-size-unit));
+    --gf-panel-height: calc(65 * var(--op-size-unit));
+    --gf-header-padding: calc(5 * var(--op-size-unit));
+
+    display: grid;
+    grid-template-areas:
+        "game-baord game-feed"
+        "your-hand your-books";
+    grid-template-columns: 1fr var(--gf-panel-width);
+    grid-template-rows: 1fr var(--gf-panel-height);
+    height: 100vh;
+    overflow: auto;
+}
+
+// first level blocks
+.game-board,
+.game-feed,
+.your-books,
+.your-hand {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: auto;
+}
+
+.game-board,
+.game-feed {
+    --game-header-height: calc(15 * var(--op-size-unit));
+    grid-template-rows: var(--game-header-height) 1fr;
+}
+
+.your-hand,
+.your-books {
+    display: flex;
+    padding-bottom: var(--op-space-x-small);
+    flex-direction: column;
+    gap: var(--op-space-medium);
+}
+
+.game-board {
+    grid-area: game-baord;
+}
+
+.game-feed {
+    grid-area: game-feed;
+    box-shadow: var(--op-border-left) var(--op-color-border);
+    background: var(--op-color-primary-plus-eight);
+}
+
+.your-hand {
+    grid-area: your-hand;
+    box-shadow: var(--op-border-top) var(--op-color-border);
+}
+
+.your-books {
+    grid-area: your-books;
+    background: var(--op-color-neutral-plus-eight);
+    box-shadow: var(--op-border-top) var(--op-color-border);
+    box-shadow: var(--op-border-left) var(--op-color-border);
+}
+
+
+// block headers
+.game-header,
+.your-header {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--op-border-bottom) var(--op-color-border);
+    padding-inline: var(--op-space-medium);
+    padding-top: var(--op-space-small);
+    padding-bottom: var(--op-space-x-small);
+}
+
+.your-header {
+    box-shadow: var(--op-border-bottom) var(--op-color-border);
+}
+
+.game-board__header {
+    gap: var(--op-space-x-small);
+    padding-block: var(--op-space-2x-small);
+
+    box-shadow: var(--op-border-bottom) var(--op-color-border);
+}
+
+.game-feed__header {
+    justify-content: space-between;
+}
+
+.your-header,
+.game-header span {
+    font-size: var(--op-font-large);
+}
+
+.game-feed span,
+.your-header {
+    color: var(--op-color-primary-on-plus-eight-alt);
+}
+
+.turn-info-badge {
+    display: flex;
+    padding: 4px 8px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: var(--op-radius-medium);
+    box-shadow: var(--op-border-all) var(--op-color-neutral-plus-max);
+    background: var(--op-color-primary-base);
+}

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <link rel="stylesheet" href="/style.scss">
+  <link rel="stylesheet" href="./stylesheets/application.scss">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Go Fish</title>
 </head>
@@ -12,9 +12,9 @@
 <body class="app-body">
   <div class="game-page">
     <div class="game-board">
-      <div class="game-header go-back">
+      <div class="game-header game-board__header">
         <span class="material-symbols-outlined icon--outlined icon--x-large icon--weight-bold">arrow_back</span>
-        <span class="game-header__text">Game 1</span>
+        <span>Game 1</span>
       </div>
 
       <div class="player-decks">
@@ -112,9 +112,9 @@
     </div>
 
     <div class="game-feed">
-      <div class="game-header show-turn">
-        <span class="game-header__text game-feed__text">Game Feed</span>
-        <div class="badge-info">Your Turn</div>
+      <div class="game-header game-feed__header">
+        <span>Game Feed</span>
+        <div class="turn-info-badge">Your Turn</div>
       </div>
 
       <div class="feed-section">
@@ -161,7 +161,7 @@
     </div>
 
     <div class="your-hand">
-      <span class="your-header your-header__text">Your Hand</span>
+      <span class="your-header">Your Hand</span>
 
       <div class="your-hand__cards card-stack">
         <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
@@ -176,7 +176,7 @@
     </div>
 
     <div class="your-books">
-      <span class="your-header your-header__text">Your Books</span>
+      <span class="your-header">Your Books</span>
 
       <div class="your-books__cards card-stack">
         <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
