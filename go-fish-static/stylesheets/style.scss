@@ -90,9 +90,16 @@
   flex: 1 0 0;
 }
 
-.card-stack--books {
+.books-container {
+  display: flex;
+  justify-content: flex-end;
+  overflow: auto;
   min-width: 25%;
   flex: 0 1 0;
+}
+
+.card-stack--books {
+  height: 80%;
 }
 
 // game feed content

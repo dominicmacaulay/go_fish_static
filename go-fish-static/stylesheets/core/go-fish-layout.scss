@@ -16,7 +16,6 @@
 }
 
 // first level blocks
-.game-board,
 .game-feed,
 .your-books,
 .your-hand {
@@ -25,7 +24,6 @@
     overflow: auto;
 }
 
-.game-board,
 .game-feed {
     --game-header-height: calc(15 * var(--op-size-unit));
     grid-template-rows: var(--game-header-height) 1fr;
@@ -37,10 +35,6 @@
     padding-bottom: var(--op-space-x-small);
     flex-direction: column;
     gap: var(--op-space-medium);
-}
-
-.game-board {
-    grid-area: game-baord;
 }
 
 .game-feed {
@@ -78,19 +72,11 @@
     box-shadow: var(--op-border-bottom) var(--op-color-border);
 }
 
-.game-board__header {
-    gap: var(--op-space-x-small);
-    padding-block: var(--op-space-2x-small);
-
-    box-shadow: var(--op-border-bottom) var(--op-color-border);
-}
-
 .game-feed__header {
     justify-content: space-between;
 }
 
-.your-header,
-.game-header span {
+.your-header {
     font-size: var(--op-font-large);
 }
 

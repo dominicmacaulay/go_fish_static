@@ -1,0 +1,30 @@
+@import "@rolemodel/optics/dist/scss/optics.scss";
+
+.game-board {
+    grid-area: game-baord;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: auto;
+    --game-header-height: calc(15 * var(--op-size-unit));
+    grid-template-rows: var(--game-header-height) 1fr;
+
+    .game-board__header {
+        grid-area: 1 / 1 / 2 / 2;
+        display: flex;
+        align-items: center;
+        box-shadow: var(--op-border-bottom) var(--op-color-border);
+        padding-inline: var(--op-space-medium);
+        padding-top: var(--op-space-small);
+        padding-bottom: var(--op-space-x-small);
+
+        gap: var(--op-space-x-small);
+        padding-block: var(--op-space-2x-small);
+
+        box-shadow: var(--op-border-bottom) var(--op-color-border);
+
+
+        .game-header span {
+            font-size: var(--op-font-large);
+        }
+    }
+}
