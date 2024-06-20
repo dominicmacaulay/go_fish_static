@@ -10,15 +10,13 @@
     flex-direction: column;
     gap: var(--op-space-medium);
 
-    .your-header {
-        grid-area: 1 / 1 / 2 / 2;
+    span {
         display: flex;
         align-items: center;
         box-shadow: var(--op-border-bottom) var(--op-color-border);
         padding-inline: var(--op-space-medium);
         padding-top: var(--op-space-small);
         padding-bottom: var(--op-space-x-small);
-        box-shadow: var(--op-border-bottom) var(--op-color-border);
         font-size: var(--op-font-large);
         color: var(--op-color-primary-on-plus-eight-alt);
     }
