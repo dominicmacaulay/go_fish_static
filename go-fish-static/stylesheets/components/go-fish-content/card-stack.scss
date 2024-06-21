@@ -2,7 +2,11 @@
     display: flex;
     overflow: auto;
 
-    &.card-stack--books {
+    &.card-stack--accordion-hand {
+        height: calc(35 * var(--op-size-unit));
+    }
+
+    &.card-stack--accordion-books {
         height: calc(25 * var(--op-size-unit));
         max-width: calc(50 * var(--op-size-unit))
     }
