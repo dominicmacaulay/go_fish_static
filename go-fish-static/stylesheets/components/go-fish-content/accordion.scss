@@ -34,7 +34,7 @@
 
         .player-cards {
             display: grid;
-            grid-template-columns: 3fr auto;
+            grid-template-columns: 1fr auto;
             padding: var(--op-space-small) var(--op-space-medium);
             gap: var(--op-space-x-large);
 

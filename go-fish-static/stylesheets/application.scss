@@ -11,6 +11,9 @@
 // general go fish layout components
 @import 'components/panel.scss';
 
+// optics overrides
+@import 'components/optics-overrides/badge.scss';
+
 // content components
 @import 'components/go-fish-content/notifications.scss';
 @import 'components/go-fish-content/game-action.scss';

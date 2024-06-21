@@ -14,3 +14,22 @@
     height: 100vh;
     overflow: auto;
 }
+
+// modifiers
+.panel--game-board {
+    grid-area: game-board;
+}
+
+.panel--game-feed {
+    grid-area: game-feed;
+    background-color: var(--op-color-primary-plus-eight);
+}
+
+.panel--your-hand {
+    grid-area: your-hand;
+}
+
+.panel--your-books {
+    grid-area: your-books;
+    background-color: var(--op-color-neutral-plus-eight);
+}

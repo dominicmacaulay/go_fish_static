@@ -9,25 +9,6 @@
 
     box-shadow: var(--op-border-all) var(--op-color-border);
 
-    // modifiers
-    &.panel--game-board {
-        grid-area: game-board;
-    }
-
-    &.panel--game-feed {
-        grid-area: game-feed;
-        background-color: var(--op-color-primary-plus-eight);
-    }
-
-    &.panel--your-hand {
-        grid-area: your-hand;
-    }
-
-    &.panel--your-books {
-        grid-area: your-books;
-        background-color: var(--op-color-neutral-plus-eight);
-    }
-
     // children
     .panel__header {
         grid-area: 1 / 1 / 2 / 2;
@@ -54,18 +35,6 @@
 
             span {
                 color: var(--op-color-primary-on-plus-eight-alt);
-            }
-
-            .turn-info-badge {
-                display: flex;
-                padding: 4px 8px;
-                justify-content: flex-end;
-                align-items: center;
-                gap: 8px;
-
-                border-radius: var(--op-radius-medium);
-                box-shadow: var(--op-border-all) var(--op-color-neutral-plus-max);
-                background-color: var(--op-color-primary-base);
             }
         }
 
