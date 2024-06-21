@@ -21,7 +21,7 @@
             background-color: var(--op-color-primary-plus-five);
         }
 
-        .message__first-response {
+        .message__opponent-response {
             padding: var(--op-space-small);
 
             border-radius: var(--op-radius-x-large);
@@ -30,7 +30,7 @@
             color: var(--op-color-alerts-warning-on-plus-seven-alt);
         }
 
-        .message__second-response {
+        .message__round-result {
             padding: var(--op-space-small);
 
             border-radius: var(--op-radius-x-large);
