@@ -16,20 +16,20 @@
 }
 
 // modifiers
-.panel--game-board {
+.go-fish-panel--game-board {
     grid-area: game-board;
 }
 
-.panel--game-feed {
+.go-fish-panel--game-feed {
     grid-area: game-feed;
     background-color: var(--op-color-primary-plus-eight);
 }
 
-.panel--your-hand {
+.go-fish-panel--your-hand {
     grid-area: your-hand;
 }
 
-.panel--your-books {
+.go-fish-panel--your-books {
     grid-area: your-books;
     background-color: var(--op-color-neutral-plus-eight);
 }

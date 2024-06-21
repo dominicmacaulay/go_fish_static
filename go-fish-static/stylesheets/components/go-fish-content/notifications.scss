@@ -6,35 +6,36 @@
     overflow: auto;
 }
 
-.message {
+.notification {
     display: flex;
     align-items: center;
     width: 100%;
     gap: var(--op-space-x-small);
     padding-inline: var(--op-space-small);
 
-    border-radius: var(--op-radius-x-large);
     color: var(--op-color-primary-on-plus-five-alt);
 
-    .message--player-action {
+    >* {
+        border-radius: var(--op-radius-x-large);
+    }
+
+    .notification--player-action {
         padding: var(--op-space-small);
         width: auto;
         background-color: var(--op-color-primary-plus-five);
     }
 
-    .message__opponent-response {
+    .notification__opponent-response {
         padding: var(--op-space-small);
 
-        border-radius: var(--op-radius-x-large);
         box-shadow: var(--op-border-all) var(--op-color-alerts-warning-plus-five);
         background-color: var(--op-color-alerts-warning-plus-seven);
         color: var(--op-color-alerts-warning-on-plus-seven-alt);
     }
 
-    .message__round-result {
+    .notification__round-result {
         padding: var(--op-space-small);
 
-        border-radius: var(--op-radius-x-large);
         box-shadow: var(--op-border-all) var(--op-color-primary-plus-seven);
         background-color: var(--op-color-primary-plus-max);
         color: var(--op-color-primary-on-plus-max);

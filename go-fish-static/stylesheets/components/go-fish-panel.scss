@@ -1,7 +1,7 @@
 @import "@rolemodel/optics/dist/scss/optics.scss";
 
 // TODO: pull in modifiers
-.panel {
+.go-fish-panel {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: calc(15 * var(--op-size-unit)) 1fr;
@@ -10,7 +10,7 @@
     box-shadow: var(--op-border-all) var(--op-color-border);
 
     // children
-    .panel__header {
+    .go-fish-panel__header {
         grid-area: 1 / 1 / 2 / 2;
         display: flex;
         align-items: center;
@@ -21,7 +21,7 @@
         padding-bottom: var(--op-space-x-small);
 
         // modifiers
-        &.panel__header--game-board {
+        &.go-fish-panel__header--game-board {
             gap: var(--op-space-x-small);
             padding-block: var(--op-space-2x-small);
 
@@ -30,7 +30,7 @@
             }
         }
 
-        &.panel__header--game-feed {
+        &.go-fish-panel__header--game-feed {
             justify-content: space-between;
 
             span {
@@ -38,32 +38,32 @@
             }
         }
 
-        &.panel__header--your-hand,
-        &.panel__header--your-books {
+        &.go-fish-panel__header--your-hand,
+        &.go-fish-panel__header--your-books {
             font-size: var(--op-font-large);
             color: var(--op-color-primary-on-plus-eight-alt);
         }
     }
 
-    .panel__content {
+    .go-fish-panel__content {
         display: grid;
         padding: var(--op-space-medium);
         overflow: auto;
 
         // modifiers
-        &.panel__content--game-board {
+        &.go-fish-panel__content--game-board {
             align-content: start;
             gap: var(--op-space-x-small);
         }
 
-        &.panel__content--game-feed {
+        &.go-fish-panel__content--game-feed {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
 
-        &.panel__content--your-hand,
-        &.panel__content--your-books {
+        &.go-fish-panel__content--your-hand,
+        &.go-fish-panel__content--your-books {
             padding-bottom: var(--op-space-x-small);
         }
     }

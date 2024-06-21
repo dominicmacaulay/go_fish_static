@@ -1,15 +1,22 @@
 // optics
 @import "@rolemodel/optics/dist/scss/optics.scss";
 
-// themes
-@import 'core/themes/figma-theme-core.scss';
-@import 'core/themes/figma-theme-dark.scss';
+// dominic theme
+@import 'core/themes/dominic-theme-core.scss';
+@import 'core/themes/dominic-theme-light.scss';
+
+// jullian theme
+@import 'core/themes/jullian-theme-core.scss';
+@import 'core/themes/jullian-theme-light.scss';
+
+// gabriel theme
+@import 'core/themes/gabriel-theme-core.scss';
 
 // standard layout
 @import 'core/go-fish-layout.scss';
 
 // general go fish layout components
-@import 'components/panel.scss';
+@import 'components/go-fish-panel.scss';
 
 // optics overrides
 @import 'components/optics-overrides/badge.scss';
