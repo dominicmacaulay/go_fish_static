@@ -9,4 +9,14 @@
     --op-space-2x-large: calc(var(--op-space-scale-unit) * 5.6);
     --op-space-3x-large: calc(var(--op-space-scale-unit) * 8);
     --op-space-4x-large: calc(var(--op-space-scale-unit) * 16);
+
+    // game action drop down override
+    %form-control-global {
+
+        &#player-selection,
+        &#card-selection {
+            background-position-x: calc(100% - (var(--op-space-x-large) / 2 - var(--op-encoded-images-dropdown-arrow-width) / 2));
+            padding: var(--op-space-3x-small) var(--op-space-2x-small) var(--op-space-3x-small) var(--op-space-2x-small);
+        }
+    }
 }
