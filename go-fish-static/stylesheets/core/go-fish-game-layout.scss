@@ -1,9 +1,6 @@
-@import "@rolemodel/optics/dist/scss/optics.scss";
-
 .game-page {
     --gf-panel-width: calc(100 * var(--op-size-unit));
     --gf-panel-height: calc(65 * var(--op-size-unit));
-    --gf-header-padding: calc(5 * var(--op-size-unit));
 
     display: grid;
     grid-template-areas:

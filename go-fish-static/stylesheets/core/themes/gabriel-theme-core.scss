@@ -12,7 +12,6 @@
 
     // game action drop down override
     %form-control-global {
-
         &#player-selection,
         &#card-selection {
             background-position-x: calc(100% - (var(--op-space-x-large) / 2 - var(--op-encoded-images-dropdown-arrow-width) / 2));
